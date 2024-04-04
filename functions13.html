@@ -1,0 +1,28 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function pal(s)
+            {
+                var rem;
+                var sum=0;
+                var a=s;
+                while (s)
+                {
+                    rem=s%10
+                    sum=sum*10+rem
+                    s=parseInt(s/10)
+                }
+                if(sum==a)
+                {
+                    console.log('it is a palandrome')
+                }
+                else
+                {
+                    console.log('it is not a palandrome')
+                }
+            }
+            pal(12321)
+        </script>
+    </body>
+</html>

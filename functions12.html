@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <!-- write a function which can to display the reverse of a given number. -->
+        <script>
+            function rev(x)
+            {
+                var rem;
+                var sum=0;
+                while(x)
+                {
+                    rem=x%10;
+                    sum=sum*10+rem
+                    x=parseInt(x/10)
+                }
+                console.log(sum)
+            }
+            var reverse=rev(1042)
+        </script>
+    </body>
+</html>

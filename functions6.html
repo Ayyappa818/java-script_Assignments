@@ -1,0 +1,54 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function pali(a){
+                var b=a;
+                var sum=0;
+                var rem;
+                while(a)
+                {
+                    rem=a%10
+                    sum=sum*10+rem
+                    a=parseInt(a/10)
+                }
+                if(sum==b){
+                    console.log('given number is a palandrom')
+                }
+                else
+                {
+                    console.log('given number is not a palandrom')
+                }
+            }
+            pali(121)
+            pali(223)
+            pali(818)
+        </script>
+        <script>
+            var ar =[12,34,59,10,48];
+            var x=ar.forEach(function(a,i){
+                console.log("hi",a)
+                return 'hello'
+            })
+            console.log(x)
+        </script>
+        <script>
+            var ar=[12,34,59,10,48]
+            var z=ar.map(function(b,i)
+            {
+                console.log('whats app',b)
+                return b*5
+            })
+            console.log(z)
+        </script>
+        <script>
+            var ar =[12,34,59,10,48];
+            var sum=0;
+            var y=ar.forEach(function(a,b){
+                sum=sum+a
+                console.log(a)
+            })
+            console.log(sum)
+        </script>
+    </body>
+</html>

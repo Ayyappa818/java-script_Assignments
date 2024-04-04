@@ -1,0 +1,116 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var people = [
+                            {
+                            "firstname": "praveen",
+                            "lastname": "gubbala",
+                            "age": 36,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 10000
+                            },
+                            {
+                            "firstname": "srikanth",
+                            "lastname": "gubbala",
+                            "age": 32,
+                            "gender": "male",
+                            "city": "bengaluru",
+                            "salary": 20000
+                            },
+                            {
+                            "firstname": "pradeep",
+                            "lastname": "reddy",
+                            "age": 21,
+                            "gender": "male",
+                            "city": "hyd",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "mounika",
+                            "lastname": "mudiraj",
+                            "age": 20,
+                            "gender": "female",
+                            "city": "nalgonda",
+                            "salary": 30000
+                            },
+                            {
+                            "firstname": "nikhil",
+                            "lastname": "m",
+                            "age": 22,
+                            "gender": "male",
+                            "city": "guntur",
+                            "salary": 2000
+                            },
+                            {
+                            "firstname": "riya",
+                            "lastname": "bhadouria",
+                            "age": 14,
+                            "gender": "female",
+                            "city": "indore",
+                            "salary": 40000
+                            }
+                            ];
+                            var A=people.forEach(function(a){
+                                console.log(a.firstname)
+                            })
+
+
+                            var B=people.forEach(function(a){
+                                console.log(a.lastname)
+                            })
+
+
+                            var C=people.filter(function(a){
+                                return a.age>=25
+                            })
+                            var c=C.map(function(a){
+                                return a.firstname+" "+a.lastname
+                            })
+                            console.log(c)
+
+
+                            var D=people.filter(function(a){
+                                return a.gender==='female'
+                            })
+                            var d=D.map(function(a){
+                                return a.firstname+" "+a.lastname
+                            })
+                            console.log(d)
+
+
+                            var E=people.filter(function(a){
+                                return a.salary>=(25000*(115/100))
+                            })
+                            // var a=E.map(function(b){
+                            //     return b.firstname
+                            // })
+                            // console.log(a);
+
+                            E.forEach(function(b){
+                                console.log(b.firstname)
+                            })
+
+
+
+                            var E=people.filter(function(a){
+                                return a.salary>=25000
+                            })
+                            var e=E.map(function(z){
+                                return z.salary+z.salary*0.15
+                            })
+                            console.log(e)
+
+
+                            var sw=prompt();
+                            var ay=people.filter(function(a){
+                                return a.city===sw
+                            })
+                            var ap=ay.map(function(a){
+                                return a.firstname
+                            })
+                            console.log(ap)
+        </script>
+    </body>
+</html>
