@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="a1">100</h1>
+        <button onclick="inc()">Increment</button>
+        <button onclick="dec()">decrement</button>
+        <script>
+           count= document.getElementById('a1').innerHTML
+            function inc(){
+                count++;
+                document.getElementById('a1').innerHTML=count;
+            }
+           count= document.getElementById('a1').innerHTML
+            function dec(){
+                count--;
+                document.getElementById('a1').innerHTML=count;
+            }
+
+        </script>
+    </body>
+</html>

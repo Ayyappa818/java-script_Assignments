@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <ul class="a1">
+            <li>Apple</li>
+            <li>Mango</li>
+            <li>Orange</li>
+        </ul>
+        <script>
+            var result=[]
+            var x=document.querySelectorAll('li')
+            x.forEach(function(a){
+                // console.log(a.innerHTML)
+                result.push(a.innerHTML)
+            })
+            // console.log(x)
+            console.log(result)
+        </script>
+    </body>
+</html> 

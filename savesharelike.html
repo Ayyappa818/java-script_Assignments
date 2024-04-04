@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="likes">like: <span></span></h1>
+        <h1 id="saves">save:<span></span></h1>
+        <h1 id="shares">share:<span></span></h1>
+        <h1 id="subscribes">subscribe:<span></span></h1>
+        <button onclick="likes()">like</button>
+        <button onclick="saves()">save</button>
+        <button onclick="shares()">share</button>
+        <button onclick="subscribes()">subscribe</button>
+        <script>
+            var like=0;
+           like= document.querySelector("#likes span").innerHTML=like;
+            function likes(){
+                like++;
+                document.querySelector("#likes span").innerHTML=like;
+            }
+            var save=0;
+            save=document.querySelector('#saves span').innerHTML=save;
+            function saves(){
+                save++;
+                document.querySelector('#saves span').innerHTML=save;
+            }
+            var share=0;
+            share=document.querySelector('#shares span').innerHTML=share;
+            function shares(){
+                share++
+                share=document.querySelector("#shares span").innerHTML=share;
+            }
+            var subscribe=0;
+            document.querySelector("#subscribes span").innerHTML=subscribe;
+            function subscribes(){
+                subscribe++;
+                document.querySelector("#subscribes span").innerHTML=subscribe
+            }
+        </script>
+    </body>
+</html>

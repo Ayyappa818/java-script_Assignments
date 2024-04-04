@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="d1">
+        <button onclick="show()">ADD students</button>
+        <ul id="d2">
+
+        </ul>
+        <script>
+            var students =['anu','lilly','radhika']
+            function din(){
+            students.forEach(function(s){
+                var nli=document.createElement("li");
+                nli.innerHTML=s;
+                document.getElementById("d2").appendChild(nli)
+            })}
+            din()
+            function show(){
+                var val =document.getElementById("d1").value;
+                students.push(val)
+                din()
+                console.log(students)
+            }
+        </script>
+    </body>
+</html>

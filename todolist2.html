@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="d1">
+        <button onclick="show()">Show the name</button>
+        <ul id="a1">
+
+        </ul>
+        <script>
+           var ar=["Ayyappa",'Anji',"Jaya","meghana",'tarun','thota']
+           function abc(){
+            document.getElementById("a1").innerHTML=" "
+            ar.forEach(function(a,i){
+                var nli=document.createElement("li")
+                nli.innerHTML=a
+                document.getElementById("a1").appendChild(nli)
+                var btn=document.createElement("button")
+                btn.innerHTML="del"
+                btn.onclick=function ad(){
+                    ar.splice(i,1)
+                    abc()
+                }
+                nli.appendChild(btn)
+            })
+          
+            
+        } abc()
+           
+            function show(){
+                var val =document.getElementById("d1").value;
+                ar.push(val)
+                abc()
+                console.log(ar)
+            }
+        </script>
+    </body>
+</html>

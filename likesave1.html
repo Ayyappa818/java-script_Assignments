@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="a1"></h1>
+        <button onclick="inc()">increment</button>
+        <button onclick="dec()">decrement</button>
+        <button onclick="res()">restart</button>
+        <script>
+            var count=100;
+            count=document.getElementById('a1').innerHTML=count;
+            function inc(){
+                count++;
+                document.getElementById('a1').innerHTML=count;
+            }
+            function dec(){
+                count--;
+                document.getElementById('a1').innerHTML=count;
+            }
+            function res(){
+                count=0;
+                document.getElementById('a1').innerHTML=count;
+            }
+        </script>
+    </body>
+</html>

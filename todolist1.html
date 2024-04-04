@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body> 
+        <input type="text">
+        <button onclick="show()">show me</button>
+        <ul id="a1"></ul>
+        <script>
+            var ar=["Ayyappa",'Anji',"Jaya","meghana"]
+            ar.forEach(function(a,i){
+                var nli=document.createElement("li")
+                nli.innerHTML=a
+                document.getElementById("a1").appendChild(nli)
+                var btn=document.createElement("button")
+                btn.innerHTML="del"
+                nli.appendChild(btn)
+                btn.onclick=function show(){
+                    alert(i)
+                }
+            })
+            
+        </script>
+    </body>
+</html>

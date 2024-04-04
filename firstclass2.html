@@ -83,10 +83,10 @@
                             var E=people.filter(function(a){
                                 return a.salary>=(25000*(115/100))
                             })
-                            // var a=E.map(function(b){
-                            //     return b.firstname
-                            // })
-                            // console.log(a);
+                        //    --- // var a=E.map(function(b){
+                        //     //     return b.firstname
+                        //     // })
+                        //     // console.log(a);  ---
 
                             E.forEach(function(b){
                                 console.log(b.firstname)
@@ -111,6 +111,80 @@
                                 return a.firstname
                             })
                             console.log(ap)
+
+
+                            var al =people.sort(function(a,b){
+                                if(a.firstname+a.lastname<b.firstname+b.lastname)
+                                {
+                                    return -1
+                                }
+                                else
+                                {
+                                    return 1
+                                }
+                            })
+                            var sl=al.map(function(a){
+                                return a.firstname+" "+a.lastname
+                            })
+                            console.log(sl)
+
+
+                            var sal = people.reduce(function(a,b){
+                                return a+b.salary
+                            },0)
+                            console.log(sal)
+
+
+                            var inc =people.sort(function(a,b){
+                                if(a.age>b.age){
+                                    return -1
+                                }
+                                else{
+                                    return 1
+                                }
+                            })
+                            var ord=inc.forEach(function(a){
+                                console.log(a.firstname)
+                            })
+                            
+
+                            var dec=people.sort(function(a,b){
+                                if(a.salary<b.salary){
+                                    return -1
+                                }
+                                else{
+                                    return 1
+                                }
+                            })
+                            var ord=dec.forEach(function(a){
+                                console.log(a.salary)
+                            })
+                            
+                            var fil=people.map(function(a){
+                                return a.city
+                            })
+
+                            console.log(fil)
+                            var result=[]
+
+                           fil.forEach(function(a){
+                            if(result.indexOf(a)==-1){
+                                result.push(a)
+                            }
+                           })
+                            console.log(result)
+
+
+                            var mal=people.filter(function(a){
+                                if(a.gender==='male'){
+                                    if(a.age>=25){
+                                        return a.firstname
+                                    }
+                                }
+                            })
+                            var gen=mal.forEach(function(a){
+                                console.log(a.firstname)
+                            })
         </script>
     </body>
 </html>
