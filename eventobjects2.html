@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+            #a1{
+                width: 300px;
+                height: 400px;
+                border: 2px solid ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a1" onclick="as()"></div>
+        <script>
+            var ar=['yellow','red','black','skyblue','pink','lightgreen']
+            var i=0;
+            function as(){
+                document.getElementById("a1").style.backgroundColor=ar[i]
+                i=(i+1)%ar.length
+            }
+        </script>
+    </body>
+</html>

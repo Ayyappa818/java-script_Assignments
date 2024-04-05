@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            #d2{
+                width: 300px;
+                height: 400px;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+     <!-- Gennerate list elements using docement object for the array of objects. -->
+    <body>
+        
+         <ul id="dd">
+
+         </ul>
+         <div id="d2"></div>
+        <script>
+        var students = [
+        {
+        name:'jaya',
+        gender:'female',
+        place:'gachibowli',
+        },
+        {
+        name:'dasu',
+        gender:'male',
+        place:'kphb'
+        },
+        {
+        name:'swati',
+        gender:'female',
+        place:'pune'
+        },
+        {
+        name:'pallavi',
+        gender:'female',
+        place:'assam'
+        },
+        {
+        name:'kiran',
+        gender:'male',
+        place:'kondapur'
+        },
+        {
+        name:'thirumala',
+        gender:'male',
+        place:'madhapur'
+        },
+        {
+        name:'priya',
+        gender:'female',
+        place:'hitech'
+        }
+    ]
+    var b= document.getElementById("dd");
+
+     students.forEach(function(a){
+        var x=document.createElement("li")
+        x.innerHTML=a.name
+         b.appendChild(x)
+
+        var y=document.createElement("ul")
+        var z=document.createElement("li")
+        z.innerHTML=a.gender
+        if(a.gender==="male"){
+            y.style.backgroundColor="skyblue"
+        }
+        else{
+            y.style.backgroundColor="pink"
+        }
+        y.appendChild(z)
+
+        var p=document.createElement("li")
+        p.innerHTML=a.place
+        y.appendChild(p)
+
+       b.appendChild(y)
+     })  
+    </script>
+    </body>
+</html>
