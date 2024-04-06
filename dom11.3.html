@@ -1,0 +1,102 @@
+<html>
+    <head></head>
+    <body>
+        <table id="a1" width="50%" height="50%" align="center" border="2px solid" cellpadding="10">
+            <thead>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Salary</th>
+            </thead>
+            <tbody id="a2">
+
+            </tbody>
+        </table>
+        <script>
+             var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                    ]
+                    people.filter(function(s){
+                        if(s.gender==='male'){
+                            if(s.age>25){
+                            var t1=document.createElement("tr")
+                            var t2=document.createElement("td")
+                            t2.innerHTML=s.firstname
+                            t1.appendChild(t2)
+
+                            var t3=document.createElement("td")
+                            t3.innerHTML=s.lastname
+                            t1.appendChild(t3)
+
+                            var t4=document.createElement("td")
+                            t4.innerHTML=s.age
+                            t1.appendChild(t4)
+
+                            var t5=document.createElement("td")
+                            t5.innerHTML=s.gender
+                            t1.appendChild(t5)
+
+                            var t6=document.createElement("td")
+                            t6.innerHTML=s.city
+                            t1.appendChild(t6)
+
+                            var t7=document.createElement("td")
+                            t7.innerHTML=s.salary
+                            t1.appendChild(t7)
+
+                            document.getElementById("a2").appendChild(t1)
+                            }
+                        }
+                    })
+        </script>
+    </body>
+</html>

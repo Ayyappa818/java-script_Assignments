@@ -1,6 +1,10 @@
 <html>
     <head>
         <style>
+            #b1{
+                width: 100%;
+                border: 2px solid red;
+            }
             #d2{
                 width: 300px;
                 height: 400px;
@@ -10,13 +14,11 @@
     </head>
      <!-- Gennerate list elements using docement object for the array of objects. -->
     <body>
-        
-         <ul id="dd">
-
-         </ul>
-         <div id="d2"></div>
+        <div id="b1">
+        <ul id="a1"></ul>
+        </div>
         <script>
-        var students = [
+            var students = [
         {
         name:'jaya',
         gender:'female',
@@ -53,30 +55,28 @@
         place:'hitech'
         }
     ]
-    var b= document.getElementById("dd");
+    var x=document.getElementById("a1")
+    students.forEach(function(a){
+        var y=document.createElement("li")
+        y.innerHTML=a.name
+        x.appendChild(y)
 
-     students.forEach(function(a){
-        var x=document.createElement("li")
-        x.innerHTML=a.name
-         b.appendChild(x)
-
-        var y=document.createElement("ul")
-        var z=document.createElement("li")
-        z.innerHTML=a.gender
-        if(a.gender==="male"){
+        var yy=document.createElement("ul")
+        var yz=document.createElement("li")
+        yz.innerHTML=a.gender
+        if(a.gender==="male")
+        {
             y.style.backgroundColor="skyblue"
         }
         else{
             y.style.backgroundColor="pink"
         }
-        y.appendChild(z)
-
-        var p=document.createElement("li")
-        p.innerHTML=a.place
-        y.appendChild(p)
-
-       b.appendChild(y)
-     })  
-    </script>
+        y.appendChild(yy)
+        yy.appendChild(yz)
+        var z=document.createElement("li")
+        z.innerHTML=a.place
+        yy.appendChild(z)
+    })
+        </script>
     </body>
 </html>

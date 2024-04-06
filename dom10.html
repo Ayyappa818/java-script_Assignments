@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                width: 30%;
+                border: 2px solid ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="s1">
+        <ol id="a1">
+
+        </ol>
+        </div>
+        <script>
+            var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+                            var a=document.getElementById("a1")
+                            students.forEach(function(s){
+                                var b=document.createElement("li")
+                                b.innerHTML=s.firstname
+                                a.appendChild(b)
+
+                                var c=document.createElement("ol")
+                                b.appendChild(c);
+
+                                s.subjects.forEach(function(l){
+                                    var uli=document.createElement('li');
+                                    uli.innerHTML=l;
+                                    c.appendChild(uli)
+                                })
+                            })
+                            
+        </script>
+    </body>
+</html>

@@ -2,8 +2,8 @@
     <head>
         <style>
             #a1{
-                width: 300px;
-                height: 400px;
+                width: 400px;
+                height: 200px;
                 border: 2px solid ;
             }
         </style>
@@ -20,23 +20,18 @@
         </script> -->
         <script>
            var x= document.getElementById("a1")
-           x.style.backgroundColor="red"
+           var ar=['yellow','red','black','skyblue','blue','pink','lightpink','lightgreen','green','orange']
+           var c=0;
+           x.style.backgroundColor="yellow"
 
            function changeColor(){
-            if(x.style.backgroundColor==="red")
-            {
-                x.style.backgroundColor="yellow"
-                x.style.backgroundColor="black"
-                x.style.backgroundColor="skyblue"
-                x.style.backgroundColor="pink"
-                x.style.backgroundColor="lightgreen"
+            if(c==ar.length-1){
+                c=0
+                x.style.backgroundColor=ar[c]
             }
             else{
-                x.style.backgroundColor="red"
-                x.style.backgroundColor="black"
-                x.style.backgroundColor="skyblue"
-                x.style.backgroundColor="pink"
-                x.style.backgroundColor="lightgreen"
+                c=c+1;
+                x.style.backgroundColor=ar[c]
             }
            }
         </script>
