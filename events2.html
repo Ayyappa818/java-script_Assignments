@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            #a1{
+                width: 300px;
+                height: 400px;
+                border: 2px solid ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="a1" onclick="changeColor()"></div>
+        <!-- <script>
+            var ar=['yellow','red','black','skyblue','pink','lightgreen']
+            var i=0;
+            function as(){
+                document.getElementById("a1").style.backgroundColor=ar[i]
+                i=(i+1)%ar.length
+            }
+        </script> -->
+        <script>
+           var x= document.getElementById("a1")
+           x.style.backgroundColor="red"
+
+           function changeColor(){
+            if(x.style.backgroundColor==="red")
+            {
+                x.style.backgroundColor="yellow"
+                x.style.backgroundColor="black"
+                x.style.backgroundColor="skyblue"
+                x.style.backgroundColor="pink"
+                x.style.backgroundColor="lightgreen"
+            }
+            else{
+                x.style.backgroundColor="red"
+                x.style.backgroundColor="black"
+                x.style.backgroundColor="skyblue"
+                x.style.backgroundColor="pink"
+                x.style.backgroundColor="lightgreen"
+            }
+           }
+        </script>
+    </body>
+</html>

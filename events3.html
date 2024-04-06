@@ -1,0 +1,34 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="a1"></h1>
+        <button id="d1"onclick="changeColor()">red</button>
+        <script>
+            document.getElementById("a1").innerHTML="Change button background color on click"
+            a1.style.color="red"
+
+            
+
+            var x= document.getElementById('d1');
+
+            x.style.backgroundColor='red';
+
+            function changeColor(){
+
+                if( x.style.backgroundColor==='red'){
+                    x.style.backgroundColor='green';
+                    x.innerHTML='green';
+                    x.style.color='white';
+                }
+                else{
+                    x.style.backgroundColor='red'
+                    x.innerHTML='red';
+                    x.style.color='white'
+                }
+            }
+
+
+
+        </script>
+    </body>
+</html>
