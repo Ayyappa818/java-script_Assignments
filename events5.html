@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <!-- <button id="b1" onclick="abc(event)">on</button>
+        <script>
+        function abc(){
+
+            var x=document.getElementById("b1").innerHTML=
+        }
+        </script> -->
+        <button id="b1" onclick="abc(event)">on</button>
+        <script>
+            var x= document.getElementById("b1")
+            var ar=["on","off"]
+            var c=0;
+ 
+            function abc(){
+             if(c==ar.length-1){
+                 c=0
+                 x.innerHTML=ar[c]
+             }
+             else{
+                 c=c+1;
+                 x.innerHTML=ar[c]
+             }
+            }
+         </script>
+    </body>
+</html>

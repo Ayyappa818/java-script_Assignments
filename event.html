@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <!-- <button id="btn" onclick="abc(event)">submit</button>
+        <script>
+            function abc(e){
+                console.log(e.target)
+                console.dir(document.getElementById("btn"))
+            }
+        </script> -->
+             <input type="text" id="ip" onkeyup="abc(event)">
+             <h1 id="a1"></h1>
+             <button id="btn" onkeyup="abc(event)">click</button>
+        <script>
+            function abc(e){
+                document.getElementById("a1").innerHTML=e.target.value
+                console.dir(e)
+                console.log(e.key)
+            }
+        </script>
+    </body>
+</html>
