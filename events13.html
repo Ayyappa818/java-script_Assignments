@@ -13,10 +13,10 @@
             
             var ar=[]
             function abc(){
-                var yy=document.getElementById("i1").value
+                var yy=document.getElementById("i1")
                 var a=document.getElementById("u1")
                 var x=document.createElement("li")
-                x.innerHTML=yy;
+                x.innerHTML=yy.value
                 a.appendChild(x)
                 ar.push(yy)
                 console.log(ar)

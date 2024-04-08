@@ -19,23 +19,23 @@
         <script>
             document.getElementById("h").innerHTML="Change background color using toggle button"
             document.getElementById("b1").style.backgroundColor="orange"
-            var ar=['yellow','white'];
+            var ar=['white','yellow'];
             var c=0;
-            function abc(){
-               
-                d1.style.backgroundColor=ar[c];
-                c=(c+1)%ar.length
-            }
             // function abc(){
-            //    if(c===ar.length-1){
-            //     c=0;
-            //     d1.style.backgroundColor=ar[c]
-            //    }
-            //    else{
-            //     c++;
-            //     d1.style.backgroundColor=ar[c]
-            //    }
+               
+            //     d1.style.backgroundColor=ar[c];
+            //     c=(c+1)%ar.length
             // }
+            function abc(){
+               if(c===0){
+                c++;
+                d1.style.backgroundColor=ar[c]
+               }
+               else{
+                c=0;
+                d1.style.backgroundColor=ar[c]
+               }
+            }
         </script>
     </body>
 </html>
