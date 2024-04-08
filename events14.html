@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="in">
+        <button id="b1" onclick="ac()">Submit</button>
+        <ul id="u1"></ul>
+        <script>
+            var ar=[];
+            function ac(){
+            var x=document.getElementById("in")
+            var y=document.getElementById("u1")
+            var z=document.createElement("li")
+            z.innerHTML=x.value
+            y.appendChild(z)
+            ar.push(x)
+            console.log(ar)
+            }
+        </script>
+    </body>
+</html>

@@ -1,7 +1,45 @@
 <html>
-    <head></head>
+    <head>
+        <style>
+            #db{
+                text-align: center;
+            }
+            #bd{
+                text-align: center;
+            }
+            #h{
+                text-align: center;
+            }
+        </style>
+    </head>
     <body>
+        <h1 id="h"></h1>
+        <div id="db">
+        <button id="bt1" onclick="abc(event)">Like</button><span id="b1"></span>
+        </div>
+        <br>
+        <div id="bd">
+            <button id="bt2" onclick="xyz(event)">Dislike</button><span id="b2"></span>
+        </div>
         <script>
+            var xx=document.getElementById("bt1")
+            xx.style.backgroundColor="green"
+            var yy=document.getElementById("bt2")
+            yy.style.backgroundColor="red"
+          var x= document.getElementById("h").innerHTML="Like and Dislike Button"
+          h.style.color="red"
+            var count=0;
+            var cnt=0;
+            var a1=document.querySelector("#b1")
+            function abc(){
+                count++;
+               a1.innerHTML=count
+            }
+            var a2=document.querySelector("#b2")
+            function xyz(){
+                cnt++;
+                a2.innerHTML=cnt
+            }
         </script>
     </body>
 </html>

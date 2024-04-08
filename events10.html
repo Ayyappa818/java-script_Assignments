@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width: 10%;
+                height: 100px;
+                border: 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h">
+
+        </h1>
+        <div id="d1">
+
+        </div>
+        <button id="b1" onclick="abc(event)">Toogle</button>
+        <script>
+            document.getElementById("h").innerHTML="Change background color using toggle button"
+            document.getElementById("b1").style.backgroundColor="orange"
+            var ar=['yellow','white'];
+            var c=0;
+            function abc(){
+               
+                d1.style.backgroundColor=ar[c];
+                c=(c+1)%ar.length
+            }
+            // function abc(){
+            //    if(c===ar.length-1){
+            //     c=0;
+            //     d1.style.backgroundColor=ar[c]
+            //    }
+            //    else{
+            //     c++;
+            //     d1.style.backgroundColor=ar[c]
+            //    }
+            // }
+        </script>
+    </body>
+</html>

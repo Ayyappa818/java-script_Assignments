@@ -1,10 +1,12 @@
 <html>
     <head></head>
     <body>
-        <div id="d1" align="center"><img id="i1" src="https://i.pinimg.com/originals/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.png" width="10%"></div>
+        <h1 id="h"></h1>
+        <div id="d1" align="center"><img id="i1" src="https://i.pinimg.com/originals/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.png" width="20%"></div>
         <button id="b1" onclick="abc(event)">On</button>
         <button id="b2" onclick="xyz(event)" >Off</button>
         <script>
+            var a=document.getElementById("h").innerHTML="show bulb on/off image using toogle button"
             function abc(){
             var x=document.getElementById("i1")
             x.src="https://e7.pngegg.com/pngimages/922/441/png-clipart-creative-bulb-lightbulb-energy-saving-lamps-thumbnail.png"

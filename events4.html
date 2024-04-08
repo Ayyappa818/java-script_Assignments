@@ -3,7 +3,7 @@
     <body>
         <h1 id="a1"></h1>
         <h3 id="d2"></h3>
-        <button id="d1" onclick="abc(event)">Toogle</button>
+        <button id="d1" onclick="abc(event)">Toogle</button><span id="s1"></span>
         <script>
             var x=document.getElementById("a1")
             x.innerHTML="Toogle button to show true/false"
@@ -14,16 +14,17 @@
             y.style.backgroundColor='orange';
 
             var z=document.getElementById("d2")
+            var xy=document.querySelector("#s1")
          var ar=["True","False"]
          var i=0;
               function abc(){
                 if(i==ar.length-1){
                     i=0;
-                    z.innerHTML=ar[i]
+                    xy.innerHTML=ar[i]
                 }
                 else{
                     i=i+1;
-                    z.innerHTML=ar[i]
+                    xy.innerHTML=ar[i]
                 }
               }
             
