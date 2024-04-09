@@ -1,13 +1,34 @@
 <html>
-    <head></head>
+    <head>
+        <style>
+            #d1{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:20px;
+            }
+            #d1 img{
+                max-width: 200px;
+                max-height: 200px;
+            }
+        </style>
+    </head>
     <!-- Take an array of images urls and display the images in browser -->
     <body>
+        <div id="d1"></div>
         <script>
             var images=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpJZ7XQf4_1miq-ElTKKxAnZD_ugDw2RVSsA&s","https://www.themanthanschool.co.in/blog/wp-content/uploads/2020/08/nature.jpg","https://hips.hearstapps.com/hmg-prod/images/pfeiffer-beach-sunset-big-sur-ca-royalty-free-image-1590086887.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=640:*"]
+
+            function displayimages(){
+            var y=document.getElementById("d1")
+            y.innerHTML=" "
                 images.forEach(function(s){
                     var x=document.createElement("img")
-                    
+                    x.src=s
+                    y.appendChild(x)
                 })
+            }
+                window.onload=displayimages
         </script>
     </body>
 </html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+        <h1 style="color: red;">Showing images using url</h1>
+        <input type="text" id="i1">
+        <button id="b1" onclick="abc()">Submit</button>
+        <div id="d2"></div>
+        </div>
+        <script>
+            document.getElementById("b1").style.backgroundColor="orange"
+            var ar=[]
+                function xyz(){
+                    var x=document.getElementById("d2").innerHTML=" "
+                    ar.forEach(function(a){
+                    var a1=document.createElement("img")
+                    a1.style.width="25%"
+                    a1.src=a
+                    console.dir(a1)
+                    document.getElementById("d2").appendChild(a1)
+
+                    var y=document.getElementById("i1")
+                    y.src=a
+                })
+                }
+            function abc(){
+            var z=document.getElementById("i1")
+            var xy=z.value
+            ar.push(xy)
+            xyz()
+                console.log(ar)
+                z.value=" "
+            }
+        </script>
+    </body>
+</html>

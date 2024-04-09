@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            #bb{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bb">
+        <div id="dd">
+        <h1 id="h">Show image using Url</h1>
+        <input type="text" name="" id="i1">
+        <button id="b1" onclick="abc()">Enter Image url</button>
+        </div>
+        <div id="d3"><img id="im"></div>
+        </div>
+        <script>
+            document.getElementById("b1").style.backgroundColor="orange"
+             function abc(){
+               var x=document.getElementById("i1")
+               var y=document.getElementById("im")
+               y.src=x.value
+             }
+        </script>
+    </body>
+</html>
