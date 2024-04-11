@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+            <span id="hhh"></span>
+
+        <span id="hh"></span>
+        <span id="h"></span>
+
+        </div>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button  onclick="reset()">Reset</button>
+        <!-- <script>
+           var x=1;
+           var a1=setInterval(function(){
+            if(x===10){
+                clearInterval(a1)
+            }
+            console.log(x)
+            x=x+1
+           },1000)
+        </script> -->
+        <script>
+            var i=0;
+            var j=1;
+            var k=1;
+            var t1;
+            function start(){
+                t1=setInterval(function(){
+                var aa=document.getElementById("h").innerHTML=i+"s"
+                i=i+1
+                if(i===59)
+                {
+                    i=0;
+                    var bb=document.getElementById("hh").innerHTML=j+"m"
+                    j=j+1
+                    if(j===59)
+                    {
+                        j=0;
+                        var cc=document.getElementById("hhh").innerHTML=k+"h"
+                        k=k+1
+                        if(k===24)
+                        {
+                            k=1;
+                        }
+                    }
+                }
+                },1000)
+
+
+                // t1=setInterval(function(){
+                //     var bb=document.getElementById("hh").innerHTML=j+"ms"
+                //     if(j===0){
+                //         clearInterval(t2)
+                //     }
+                //     console.log(j)
+                //     j=j+1
+                // },1)
+            }
+            function stop(){
+                clearInterval(t1)
+            }
+            function reset(){
+                clearInterval(t1)
+                i=0;
+                document.getElementById("h").innerHTML=i;
+            }
+        </script>
+    </body>
+</html>

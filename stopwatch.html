@@ -1,0 +1,80 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d1">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+            <span id="s4"></span>
+        </div>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="reset()">reset</button>
+        <script>
+            var i=1;
+            var t1;
+            var j=0;
+            var t2;
+            var k=1;
+            var t3;
+            var l=1;
+            var t4;
+            function start(){
+                t1=setInterval(function(){
+                    var aa=document.getElementById("s1").innerHTML=i+"ms"
+                    i=i+1;
+                    if(i===100)
+                    {
+                        i=0;
+                    }
+                },1)
+
+                t2=setInterval(function(){
+                    var bb=document.getElementById("s2").innerHTML=j+"s"
+                    j=j+1;
+                    if(j===59)
+                    {
+                        j=0;
+                    }
+                },1000)
+                 
+                t3=setInterval(function(){
+                    var cc=document.getElementById("s3").innerHTML=k="m"
+                    k=k+1;
+                    if(k===60)
+                    {
+                        k=0;
+                    }
+                },60000)
+
+                t4=setInterval(function(){
+                    var dd=document.getElementById("s4").innerHTML=l+"h"
+                    l=l+1;
+                    if(l===24){
+                        l=0;
+                    }
+                },3600000)
+            }
+            function stop(){
+                clearInterval(t1)
+                clearInterval(t2)
+                clearInterval(t3)
+                clearInterval(t4)
+            }
+            function reset(){
+                clearInterval(t1)
+                i=0;
+                document.getElementById("s1").innerHTML=i
+                clearInterval(t2)
+                j=1;
+                document.getElementById("s2").innerHTML=j
+                clearInterval(t3)
+                k=0;
+                document.getElementById("s3").innerHTML=k
+                clearInterval(t4)
+                l=0;
+                document.getElementById("s4").innerHTML=l
+            }
+        </script>
+    </body>
+</html>

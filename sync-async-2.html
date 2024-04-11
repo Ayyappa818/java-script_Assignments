@@ -1,0 +1,62 @@
+<html>
+    <head></head>
+    <body>
+        <div id="d1">
+            <span id="s1"></span>
+            <span id="s2"></span>
+            <span id="s3"></span>
+        </div>
+        <button onclick="start()">start</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="reset()">reset</button>
+        <script>
+            var i=0;
+            var t1;
+            var j=1;
+            var t2;
+            var k=1;
+            var t3;
+            function stop(){
+                clearInterval(t1)
+                clearInterval(t2)
+                clearInterval(t3)
+            }
+            function start(){
+                t1=setInterval(function(){
+                    var aa=document.getElementById("s1").innerHTML=i+"s"
+                    i=i+1;
+                    if(i===59){
+                        i=0;
+                    }
+                },1000)
+
+                t2=setInterval(function(){
+                    var bb=document.getElementById("s2").innerHTML=j+"m"
+                    j=j+1;
+                    if(j===60){
+                        j=1;
+                    }
+                },60000)
+
+                t3=setInterval(function(){
+                    var cc=document.getElementById("s3").innerHTML=k+"h"
+                    k=k+1;
+                    if(k===24){
+                        k=1;
+                    }
+                },3600000)
+            }
+            function reset(){
+                clearInterval(t1)
+                i=0;
+                document.getElementById("s1").innerHTML=i;
+                clearInterval(t2)
+                j=0;
+                document.getElementById("s2").innerHTML=j;
+                clearInterval(t3)
+                k=0;
+                document.getElementById("s3").innerHTML=k;
+            }
+        </script>
+    </body>
+</html>
