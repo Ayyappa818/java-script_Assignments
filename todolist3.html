@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" name="" id="a1">
+        <input type="" name="" id="">
+        <button onclick="abc()">Done</button>
+        <ul id="u1"></ul>
+        <script>
+            var ar=[]
+            function add(){
+                document.getElementById("u1").innerHTML=""
+                ar.forEach(function(s,i){
+                    var a2=document.getElementById("u1")
+                    var a3=document.createElement("li")
+                    a3.innerHTML=s
+                    a2.appendChild(a3)
+                    var btn=document.createElement("button")
+                    btn.innerHTML="edit"
+                    btn.onclick=function xy(){
+                        a3.style.color="blue"
+                        a3.style.textDecorationLine="line-through"
+                        btn.style.display="none"
+                    }
+                    a3.appendChild(btn)
+                    var btn2=document.createElement("button")
+                    btn2.innerHTML="del"
+                    btn2.onclick=function yz(){
+                        ar.splice(i,1)
+                        add()
+                    }
+                    a3.appendChild(btn2)
+                })
+            }
+
+            function abc(){
+                var a4=document.getElementById("a1").value 
+                ar.push(a4)
+                add()
+                console.log(ar)
+            }
+        </script>
+    </body>
+</html>
