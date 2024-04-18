@@ -39,8 +39,8 @@
                     a6.innerHTML=dictionary[0].meanings[0].definitions[0].definition
                     a2.appendChild(a6)
 
-                    var a7=document.createElement(a7)
-                    a7.innerHTML=dictionary[0].meanings[0].definitions[0].example?dictionary[0].meanings[0].definitions[0].example:"Three is no example"
+                    var a7=document.createElement("li")
+                    a7.innerHTML=dictionary[0].meanings[0].definitions[0].example?dictionary[0].meanings[0].definitions[0].example:"There is no example"
                     a2.appendChild(a7)
                     document.getElementById("d1").appendChild(a2)
                 })
