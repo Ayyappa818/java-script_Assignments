@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="d-flex">
-        <ul id="u1" style="background-color: red;color: black;"></ul>
+        <ul id="u1" style="background-color: gray;color:white"></ul>
         <div id="d2" class="d-flex flex-wrap w-50%  p-20 m-20"></div>
         <div id="d3"></div>
         </div>
@@ -44,8 +44,8 @@
                     cc.style.border="1px solid"
                     cc.style.padding="5"
                     cc.style.margin="5"
-                    cc.style.backgroundColor="white"
-                    cc.style.color="blue"
+                    cc.style.backgroundColor="skyblue"
+                    cc.style.color="purple"
 
                     cc.onclick=function(){
                         axios.get("https://fakestoreapi.in/api/products/"+w.id).then((resp)=>{
@@ -62,32 +62,32 @@
                     cc.appendChild(ee)
 
                     var ff=document.createElement("h6")
-                    ff.innerHTML=w.brand 
+                    ff.innerHTML="Brand : "+w.brand 
                     cc.appendChild(ff)
 
                     var gg=document.createElement("h6")
-                    gg.innerHTML=w.category
+                    gg.innerHTML="Category : "+w.category
                     cc.appendChild(gg)
 
-                    var hh=document.createElement("h6")
-                    hh.innerHTML=w.description
-                    cc.appendChild(hh)
+                    // var hh=document.createElement("h6")
+                    // hh.innerHTML=w.description
+                    // cc.appendChild(hh)
 
                     var ii=document.createElement("h6")
-                    ii.innerHTML=w.model
+                    ii.innerHTML="Model : "+w.model
                     cc.appendChild(ii)
 
                     var jj=document.createElement("h6")
-                    jj.innerHTML=w.price
+                    jj.innerHTML="Price : "+w.price
                     cc.appendChild(jj)
 
                     var kk=document.createElement("h6")
-                    kk.innerHTML=w.discount
+                    kk.innerHTML="Discount : "+w.discount
                     cc.appendChild(kk)
 
-                    var ll=document.createElement("h6")
-                    ll.innerHTML=w.title
-                    cc.appendChild(ll)
+                    // var ll=document.createElement("h6")
+                    // ll.innerHTML=w.title
+                    // cc.appendChild(ll)
 
                     document.getElementById("d2").appendChild(cc)
                 })
@@ -100,8 +100,8 @@
                 mm.style.border="2px solid"
                 mm.style.padding="10"
                 mm.style.margin="10"
-                mm.style.backgroundColor="yellow"
-                mm.style.color="red"
+                mm.style.backgroundColor="orange"
+                mm.style.color="white"
 
                 var nn=document.createElement("img")
                 nn.src=othr.image
@@ -110,27 +110,27 @@
                 mm.appendChild(nn)
 
                 var oo=document.createElement("h6")
-                oo.innerHTML=othr.brand
+                oo.innerHTML="Brand : "+othr.brand
                 mm.appendChild(oo)
 
                 var pp=document.createElement("h6")
-                pp.innerHTML=othr.category
+                pp.innerHTML="Category : "+othr.category
                 mm.appendChild(pp)
 
                 var qq=document.createElement("h6")
-                qq.innerHTML=othr.model
+                qq.innerHTML="Model : "+othr.model
                 mm.appendChild(qq)
 
                 var rr=document.createElement("h6")
-                rr.innerHTML=othr.price
+                rr.innerHTML="Price : "+othr.price
                 mm.appendChild(rr)
 
                 var ss=document.createElement("h6")
-                ss.innerHTML=othr.discount
+                ss.innerHTML="Discount : "+othr.discount
                 mm.appendChild(ss)
 
                 var tt=document.createElement("h6")
-                tt.innerHTML=othr.title
+                tt.innerHTML="Title : "+othr.title
                 mm.appendChild(tt)
                 
                 document.getElementById("d3").appendChild(mm)
