@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="d-flex">
+        <ul id="u1" style="background-color: gray;color:white"></ul>
+        <div id="d2" class="d-flex flex-wrap w-50%  p-20 m-20"></div>
+        <div id="d3"></div>
+        </div>
+        <script>
+            var pro;
+            var mob;
+            var othr;
+            axios.get("https://fakestoreapi.in/api/products/category").then((resp)=>{
+                console.log(resp.data)
+                pro=resp.data.categories
+                abc()
+            })
+            function abc(){
+                pro.forEach(function(s){
+                    var aa=document.getElementById("u1")
+                    var bb=document.createElement("li")
+                    bb.style.padding=30
+                    bb.innerHTML=s
+                    document.getElementById("u1").appendChild(bb)
+                    
+                    bb.onclick=function(){
+                        axios.get("https://fakestoreapi.in/api/products/category?type="+s).then((resp)=>{
+                            console.log(resp.data)
+                            mob=resp.data.products
+                            xyz()
+                        })
+                    }
+                })
+            }
+            function xyz(){
+                document.getElementById("d2").innerHTML=""
+                mob.forEach(function(w,i){
+                    var cc=document.createElement("div")
+                    cc.style.width="20%"
+                    cc.style.border="1px solid"
+                    cc.style.padding="5"
+                    cc.style.margin="5"
+                    cc.style.backgroundColor="skyblue"
+                    cc.style.color="purple"
+
+                    cc.onclick=function(){
+                        axios.get("https://fakestoreapi.in/api/products/"+w.id).then((resp)=>{
+                            othr=resp.data.product
+                            klm()
+                        })
+                    }
+                    var dd=document.createElement("h6")
+                    var ee=document.createElement("img")
+                    ee.src=w.image 
+                    ee.style.width="50%"
+
+                    cc.appendChild(dd)
+                    cc.appendChild(ee)
+
+                    var ff=document.createElement("h6")
+                    ff.innerHTML="Brand : "+w.brand 
+                    cc.appendChild(ff)
+
+                    var gg=document.createElement("h6")
+                    gg.innerHTML="Category : "+w.category
+                    cc.appendChild(gg)
+
+                    // var hh=document.createElement("h6")
+                    // hh.innerHTML=w.description
+                    // cc.appendChild(hh)
+
+                    var ii=document.createElement("h6")
+                    ii.innerHTML="Model : "+w.model
+                    cc.appendChild(ii)
+
+                    var jj=document.createElement("h6")
+                    jj.innerHTML="Price : "+w.price
+                    cc.appendChild(jj)
+
+                    var kk=document.createElement("h6")
+                    kk.innerHTML="Discount : "+w.discount
+                    cc.appendChild(kk)
+
+                    // var ll=document.createElement("h6")
+                    // ll.innerHTML=w.title
+                    // cc.appendChild(ll)
+
+                    document.getElementById("d2").appendChild(cc)
+                })
+            }
+
+            function klm(){
+                document.getElementById("d3").innerHTML=""
+                var mm=document.createElement("div")
+                mm.style.width="280px"
+                mm.style.border="2px solid"
+                mm.style.padding="10"
+                mm.style.margin="10"
+                mm.style.backgroundColor="orange"
+                mm.style.color="white"
+
+                var nn=document.createElement("img")
+                nn.src=othr.image
+                nn.style.width="250px"
+
+                mm.appendChild(nn)
+
+                var oo=document.createElement("h6")
+                oo.innerHTML="Brand : "+othr.brand
+                mm.appendChild(oo)
+
+                var pp=document.createElement("h6")
+                pp.innerHTML="Category : "+othr.category
+                mm.appendChild(pp)
+
+                var qq=document.createElement("h6")
+                qq.innerHTML="Model : "+othr.model
+                mm.appendChild(qq)
+
+                var rr=document.createElement("h6")
+                rr.innerHTML="Price : "+othr.price
+                mm.appendChild(rr)
+
+                var ss=document.createElement("h6")
+                ss.innerHTML="Discount : "+othr.discount
+                mm.appendChild(ss)
+
+                var tt=document.createElement("h6")
+                tt.innerHTML="Title : "+othr.title
+                mm.appendChild(tt)
+                
+                document.getElementById("d3").appendChild(mm)
+            }
+        </script>
+    </body>
+</html>
