@@ -10,20 +10,25 @@
     </head>
     <body>
         <div id="d1">
-            <h1 id="a1"><i id="i1"class="bi bi-star" onclick="ratings()"></i><span></span></h1>
-            <h1 id="a1"><i id="i2" class="bi bi-star" onclick="ratings()"></i><span></span></h1>
-            <h1 id="a1"><i id="i3" class="bi bi-star" onclick="ratings()"></i><span></span></h1>
-            <h1 id="a1"><i id="i4" class="bi bi-star" onclick="ratings()"></i><span></span></h1>
-            <h1 id="a1"><i id="i5" class="bi bi-star" onclick="ratings()"></i><span></span></h1>
+            <h1>
+            <i id="i1"class="bi bi-star" onclick="ratings(1)"></i>
+            <i id="i2" class="bi bi-star" onclick="ratings(2)"></i>
+            <i id="i3" class="bi bi-star" onclick="ratings(3)"></i>
+            <i id="i4" class="bi bi-star" onclick="ratings(4)"></i>
+            <i id="i5" class="bi bi-star" onclick="ratings(5)"></i>
+            </h1>
         </div>
         <script>
-            var rating=5/5;
-            document.querySelector("#a1 span").innerHTML=rating
-            function ratings(){
-                rating+1;
-                document.querySelector("#a1 span").innerHTML=rating
-
-                document.getElementById("i1").style.backgroundColor="yellow"
+            function ratings(rating){
+                console.log(i)
+                var x=document.querySelectorAll('.bi');
+                x.forEach(function(s){
+                    s.className="bi bi-star"
+                })
+                for(var i=0;i<=rating-1;i++){
+                    x[i].className="bi bi-star-fill"
+                }
+                console.log(x)
             }
         </script>
     </body>
