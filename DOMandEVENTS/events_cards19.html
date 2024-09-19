@@ -5,7 +5,7 @@
             Name:<input type="text" id="d1"><br><br>
             Number:<input type="number" id="d2"><br><br>
             Email:<input type="email" id="d3" ><br><br>
-            ImageURL:<input type="text" id="d4"><br><br>
+            ImageURL:<input type="url" id="d4"><br><br>
             <button onclick="btn()">Add Detail</button>
         </div>
         <div id="d6"></div>
@@ -44,10 +44,14 @@
 
 
                     var im=document.createElement("img")
-                    im.src=s.Image
+                    im.src=s.image
                     im.style.width="20px"
                     im.style.borderRadius="50%"
                     nd.appendChild(im)
+
+                    // var y=document.getElementById("d4")
+                    // y.src=s
+
                     var np=document.createElement("p")
                     np.innerHTML="Name:"+s.Name
                     nd.appendChild(np)

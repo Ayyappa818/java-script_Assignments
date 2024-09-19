@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <input type="date"  onchange="Ag()" id="e">
+            <h1 id="h"></h1>
+        </center>
+        <script>
+            function Ag() {
+                var x=document.getElementById("e").value;
+                var dob =new Date(x);
+                var today =new Date();
+                var currentage = (today.getTime()-dob.getTime())/(1000*60*60*24*365);
+                var y=document.getElementById("h");
+                y.innerHTML = "Your age is:"+currentage
+            }
+        </script>
+    </body>
+</html>
